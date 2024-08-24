@@ -1,9 +1,11 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary-bg: #ffffff;
+    --text-heading: #191919;
+    --text-primary: #1B1212;
+    --text-link: #6666ff;
+    --primary-btn-bg: #e6e6e6;
 }
 
 .App {
-    color: gray;
+    width: 100%;
 }

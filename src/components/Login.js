@@ -4,17 +4,23 @@ import { Link } from 'react-router-dom'
 import '../styles/login.css'
 
 const Login = () => {
-  return (
+  return ( 
     <div className='login' >
-      <h4> Login </h4>
+      <h4> Sign in </h4>
       <form method='post' >
-        <label htmlFor='username'> Username </label>
-        <input type='text' name='username' required /> <br />
-        <label htmlFor='password'> Password </label>
-        <input type='password' name='password' required /> <br />
-        <input type='submit' value='Login' />
+        <div className='input-container'>
+          <label htmlFor='email'> Email </label>
+          <input type='text' name='email' placeholder='Email' required />
+        </div>
+        <div className='input-container'>
+          <label htmlFor='password' id='passwordLabel'> Password </label>
+          <input type='password' name='password' placeholder='Password' required />
+        </div>
+        <div className='login-submit'>
+          <input type='submit' value='Login' />
+        </div>
       </form>
-      <Link to='/signup'> Don't have account? signup... </Link>
+      <span> Don't have account? &nbsp; <Link to='/signup'> Signup </Link> </span>
     </div>
   )
 }
