@@ -10,17 +10,17 @@ const Login = () => {
       <form method='post' >
         <div className='input-container'>
           <label htmlFor='email'> Email </label>
-          <input type='text' name='email' placeholder='email' required />
+          <input type='text' name='email' placeholder='Email' required />
         </div>
         <div className='input-container'>
-          <label htmlFor='password'> Password </label>
+          <label htmlFor='password' id='passwordLabel'> Password </label>
           <input type='password' name='password' placeholder='Password' required />
         </div>
         <div className='login-submit'>
           <input type='submit' value='Login' />
         </div>
       </form>
-      <Link to='/signup'> Don't have account? signup... </Link>
+      <span> Don't have account? &nbsp; <Link to='/signup'> Signup </Link> </span>
     </div>
   )
 }
