@@ -30,7 +30,7 @@ const Login = () => {
       </form>
       <span className="login-prompt">
         {" "}
-        Don't have an account?<Link to="/login"> Sign Up</Link>
+        Don't have an account?<Link to="/Signup"> Sign Up</Link>
       </span>
     </div>
   );
