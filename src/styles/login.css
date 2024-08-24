@@ -1,12 +1,11 @@
 .login {
     margin: 60px auto 10px auto;
-    background-color: var(--primary-bg);
     padding: 0;
     height: 80vh;
     width: 30%;
     display: grid;
     grid-template-rows: 80px auto 40px;
-    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     overflow: hidden;
 }
 
@@ -20,17 +19,23 @@
 }
 
 .login form {
+    margin-top: 30px;
     display: grid;
-    grid-template-rows: 40px 50px 40px 50px auto;
+    grid-template-rows: 80px 80px auto;
+
 }
 
 .login form label {
     color: var(--text-primary);
     display: flex;
     align-items: center;
-    margin-left: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
+}
+
+.login .input-container {
+    width: 90%;
+    margin: 0px auto;
 }
 
 .login .login-submit {
@@ -42,9 +47,10 @@
 }
 
 .login form input[type="text"] {
-    width: 90%;
-    margin: 0px auto;
+    width: 100%;
     font-size: 1.4rem;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 .login form input[type="text"]:focus {
@@ -52,9 +58,10 @@
 }
 
 .login form input[type="password"] {
-    width: 90%;
-    margin: 0px auto;
+    width: 100%;
     font-size: 1.4rem;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 .login form input[type="password"]:focus {
@@ -68,7 +75,7 @@
     width: 140px;
     height: 40px;
     background-color: var(--primary-btn-bg);
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 1.2rem;
     font-weight: 600;
     border-radius: 4px;
@@ -76,7 +83,8 @@
 
 .login form input[type="submit"]:hover {
     cursor: pointer;
-    background-color: #3333c1;
+    background-color: #000000;
+    color: var(--primary-btn-bg);
 }
 
 .login a{

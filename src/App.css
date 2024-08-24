@@ -1,9 +1,9 @@
 :root {
-    --primary-bg: #e6e6e6;
+    --primary-bg: #ffffff;
     --text-heading: #191919;
     --text-primary: #1B1212;
     --text-link: #6666ff;
-    --primary-btn-bg: #4d4dff;
+    --primary-btn-bg: #e6e6e6;
 }
 
 .App {
