@@ -1,3 +1,121 @@
+
+
 .signup {
-    color: pink;
+  width: 800px; 
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+  background-color: var(--secondary-color);
+  font-family: Arial, sans-serif;
+}
+
+.signup h4 {
+  text-align: center;
+  color: var(--text-heading);
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.signup form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.signup .form-group {
+  width: 48%; 
+  margin-bottom: 15px;
+}
+
+.signup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--label-color);
+  display: block;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="date"],
+.signup input[type="password"],
+.signup select,
+.signup input[type="file"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--input-border-color);
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup input[type="file"] {
+  padding: 5px;
+}
+
+.signup select {
+  height: 40px;
+}
+
+.signup input[type="submit"] {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--link-color);
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.signup input[type="submit"]:hover {
+  background-color: var(--hover-color);
+}
+
+.signup a {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Additional styling */
+.signup input[type="text"]:focus,
+.signup input[type="email"]:focus,
+.signup input[type="date"]:focus,
+.signup input[type="password"]:focus,
+.signup select:focus {
+  outline: none;
+  border-color: var(--link-color);
+  box-shadow: 0 0 5px var(--label-focus-color);
+}
+
+.signup input[type="file"] {
+  cursor: pointer;
+}
+
+/* Styling for the login prompt */
+.login-prompt {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--label-color);
+}
+
+.login-prompt a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
 }
