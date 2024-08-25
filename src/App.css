@@ -1,11 +1,16 @@
 :root {
-    --primary-bg: #ffffff;
-    --text-heading: #191919;
-    --text-primary: #1B1212;
-    --text-link: #6666ff;
-    --primary-btn-bg: #e6e6e6;
+  --primary-color: #4caf50; /* Primary button and highlight color */
+  --secondary-color: #f9f9f9; /* Background color */
+  --text-color: #333; /* Main text color */
+  --label-color: #555; /* Label text color */
+  --input-border-color: #ddd; /* Input border color */
+  --hover-color: #45a049; /* Button hover color */
+  --link-color: #4caf50; /* Link color */
+  --label-focus-color: #4caf5080; /* Label focus color */
+
+  --box-shadow-color: rgba(0, 0, 0, 0.1); /* Box shadow color */
 }
 
 .App {
-    width: 100%;
+  width: 100%;
 }
