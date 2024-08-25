@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../styles/login.css";
 
+
 const Login = () => {
   return (
     <div className="signin">
@@ -23,7 +24,8 @@ const Login = () => {
             <input type="checkbox" id="rememberMe" name="rememberMe" />
             <label htmlFor="rememberMe"> Remember Me </label>
           </div>
-          <a href="/forgot-password">Forgot Password?</a>
+         
+          <Link to ="/Forgot">Forgot Password?</Link>
         </div>
 
         <input type="submit" value="Sign In" />

@@ -35,6 +35,7 @@ const Signup = () => {
         <div className="form-group">
           <label htmlFor="departments"> Select Department </label>
           <select id="departments" name="departments">
+          <option value="" disabled selected>Select Department</option>
             <option value="publicWorkDepartment">Public Work Department</option>
             <option value="landAndDevlopmentOffice">
               Land And Development Office
@@ -66,6 +67,16 @@ const Signup = () => {
           <label htmlFor="cPassword"> Confirm Password </label>
           <input type="password" name="cPassword" required /> <br />
         </div>
+        <div className="form-group">
+          <label htmlFor="Gender"> Gender </label>
+          <select id="Gender" name="Gender" required>
+          <option value="" disabled selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">
+              Female
+            </option>
+            </select>{" "}
+            </div>
         <input type="submit" value="Create an account" />
       </form>
       <span className="login-prompt">

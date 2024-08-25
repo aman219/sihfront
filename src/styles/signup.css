@@ -12,8 +12,10 @@
 
 .signup h4 {
   text-align: center;
-  color: var(--text-heading);
+  color: var(--link-color);
   margin-bottom: 25px;
+  font-size: 20px;
+  font-family: 'Montoserrat', thin;
   font-size: 20px;
 }
 
