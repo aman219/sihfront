@@ -23,7 +23,7 @@ const Forgot = () => {
     let verificationCodeError = "";
 
     // Email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
     if (!emailPattern.test(formValues.email)) {
       emailError = "Invalid email address";
     }
