@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 import "../styles/login.css";
 
 
 const Login = () => {
+  
+    
+    
+    
+
   return (
     <div className="signin">
       <h4> Sign In </h4>
@@ -25,14 +31,14 @@ const Login = () => {
             <label htmlFor="rememberMe"> Remember Me </label>
           </div>
          
-          <Link to ="/Forgot">Forgot Password?</Link>
+          <Link to ="/forgot">Forgot Password?</Link>
         </div>
 
         <input type="submit" value="Sign In" />
       </form>
       <span className="login-prompt">
         {" "}
-        Don't have an account?<Link to="/Signup"> Sign Up</Link>
+        Don't have an account?<Link to="/signup"> Sign Up</Link>
       </span>
     </div>
   );

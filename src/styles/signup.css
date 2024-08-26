@@ -3,8 +3,8 @@
 .signup {
   width: 800px; 
   margin: 50px auto;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 5px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px var(--box-shadow-color);
   background-color: var(--secondary-color);
   font-family: Arial, sans-serif;
@@ -120,4 +120,20 @@
 
 .login-prompt a:hover {
   text-decoration: underline;
+}
+/* for a error message*/
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.disabled {
+  background-color: grey;
+  cursor: not-allowed;
 }
