@@ -1,99 +1,83 @@
-/* General styling */
 
-.signin {
-  width: 400px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.forgot-password {
+  width: 500px;
+ 
   padding: 20px;
-  margin: 125px auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px var(--box-shadow-color);
   background-color: var(--secondary-color);
-  font-family: Arial, sans-serif;
+  margin:125px auto
 }
 
-.signin h4 {
+
+.forgot-password h4 {
   text-align: center;
   color: var(--link-color);
   margin-bottom: 20px;
-  font-family: 'Montoserrat', thin;
   font-size: 20px;
+  font-family: 'Montoserrat', thin;
 }
 
-.signin form {
+.forgot-password form {
   display: flex;
   flex-direction: column;
 }
 
-.signin .form-group {
-  margin-bottom: 15px;
-}
-
-.signin label {
+.forgot-password label {
   font-weight: bold;
   margin-bottom: 5px;
   color: var(--label-color);
   display: block;
 }
 
-.signin input[type="email"],
-.signin input[type="password"] {
+.forgot-password input[type='email'],
+.forgot-password input[type='text'] {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--input-border-color);
   font-size: 14px;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
-.signin input[type="submit"] {
+.forgot-password input[type='submit'] {
   padding: 10px;
   border-radius: 5px;
-  background-color: var(--link-color);
+  background-color: var(--primary-color);
   color: white;
   font-size: 16px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
+  margin-top: 10px;
 }
 
-.signin input[type="submit"]:hover {
+.forgot-password input[type='submit']:hover {
   background-color: var(--hover-color);
 }
 
-/* Checkbox and links */
-.signin .form-group-remember {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.signin .form-group-remember label {
-  display: inline;
-  margin-bottom: 0;
-  margin-left: 5px;
-  color: #333;
-}
-
-.signin .form-group-remember a {
+.forgot-password a {
   color: var(--link-color);
   text-decoration: none;
   font-size: 14px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.signin .form-group-remember a:hover {
+.forgot-password a:hover {
   text-decoration: underline;
+  color: var(--label-focus-color);
 }
-
-/* Additional styling */
-.signin input[type="email"]:focus,
-.signin input[type="password"]:focus {
+.forgot-password input[type="email"]:focus,
+.forgot-password input[type="text"]:focus {
   outline: none;
   border-color: var(--link-color);
   box-shadow: 0 0 5px var(--label-focus-color);
 }
-
-.signin .form-group:last-child {
-  margin-bottom: 0;
-}
-

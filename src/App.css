@@ -5,10 +5,11 @@
   --label-color: #555; /* Label text color */
   --input-border-color: #ddd; /* Input border color */
   --hover-color: #45a049; /* Button hover color */
-  --link-color: #4caf50; /* Link color */
+  --link-color: #4caf50; /* Link color  , used in also in heading */
   --label-focus-color: #4caf5080; /* Label focus color */
 
   --box-shadow-color: rgba(0, 0, 0, 0.1); /* Box shadow color */
+
 }
 
 .App {
