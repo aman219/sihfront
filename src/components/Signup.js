@@ -9,11 +9,11 @@ const Signup = () => {
     email: "",
     phoneNumber: "",
     dateOfBirth: "",
-    dateOfJoin: "",
+    dateOfJoining: "",
     gender: "",
-    designation:"",
+    role:"",
     department: "",
-    profilePicture: null,
+    profilePhoto: null,
     password: "",
     cPassword: "",
     
@@ -27,7 +27,7 @@ const Signup = () => {
   };
 
   const handleFileChange = (e) => {
-    setFormValues({ ...formValues, profilePicture: e.target.files[0] });
+    setFormValues({ ...formValues, profilePhoto: e.target.files[0] });
   };
 
   const validate = () => {
@@ -74,10 +74,20 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (validate()) {
-      console.log("Form submitted successfully", formValues);
-      // Perform the form submission logic (e.g., send data to the server)
+      const xhr = new XMLHttpRequest();
+      const formData = new FormData(e.target);
+      delete formData["cPassword"];
+      xhr.open("POST", `${process.env.REACT_APP_SERVER}/employee/register`, true);
+      xhr.send(formData);
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          console.log(JSON.parse(xhr.response));
+          console.log("Form submitted successfully");
+        } else {
+          console.log(`Error code : ${xhr.status}`);
+        }
+      }
     } else {
       console.log("Form has errors", formErrors);
     }
@@ -86,7 +96,7 @@ const Signup = () => {
   return (
     <div className="signup">
       <h4>Create an account</h4>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} encType="multipart/form-data" >
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
           <input
@@ -164,7 +174,7 @@ const Signup = () => {
           <label htmlFor="dateOfJoin">Joining Date</label>
           <input
             type="date"
-            name="dateOfJoin"
+            name="dateOfJoining"
             value={formValues.dateOfJoin}
             onChange={handleInputChange}
             required
@@ -198,7 +208,7 @@ const Signup = () => {
           <label htmlFor="designation">Designation</label>
           <input
             type="text"
-            name="designation"
+            name="role"
             value={formValues.Designation}
             onChange={handleInputChange}
             required
@@ -212,8 +222,8 @@ const Signup = () => {
           <label htmlFor="departments">Select Department</label>
           <select
             id="departments"
-            name="departments"
-            value={formValues.departments}
+            name="department"
+            value={formValues.department}
             onChange={handleInputChange}
             required
           >
@@ -250,6 +260,7 @@ const Signup = () => {
           <label htmlFor="profilePicture">Profile Picture</label>
           <input
             type="file"
+            name="profilePhoto"
             accept="image/*"
             onChange={handleFileChange}
             required
