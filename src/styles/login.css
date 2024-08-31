@@ -68,11 +68,11 @@
   margin-bottom: 20px;
 }
 
-.signin .form-group-remember label {
+.signin .form-group-remember p {
   display: inline;
   margin-bottom: 0;
   margin-left: 5px;
-  color: #333;
+  color: #e34e4e;
 }
 
 .signin .form-group-remember a {

@@ -1,0 +1,38 @@
+
+.messageBox {
+    background-color: var(--secondary-color);
+    width: 40%;
+    height: 300px;
+    left: calc(50% - 20%);
+    top: calc(50% - 150px);
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--input-border-color);
+    overflow: hidden;
+}
+
+.display {
+    display: none;
+}
+
+.messageBox h4 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+}

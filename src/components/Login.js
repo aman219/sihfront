@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css";
 
 const Login = () => {
@@ -13,9 +13,17 @@ const Login = () => {
     password: "",
   });
 
+  const [errorMsg, setErrorMsg] = useState({
+    hidden: false,
+    message: ""
+  });
+
+  const navigate = useNavigate();
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+    setErrorMsg({ hidden: true, message: "" });
   };
 
   const validateForm = () => {
@@ -45,15 +53,27 @@ const Login = () => {
     e.preventDefault();
     const isValid = validateForm();
     if (isValid) {
-   
-      console.log("Form Submitted Successfully");
+      const xhr = new XMLHttpRequest();
+      const formData = new FormData(e.target);
+      xhr.open("POST", `${process.env.REACT_APP_SERVER}/employee/login`, true);
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          console.log(JSON.parse(xhr.response));
+          navigate("/dashboard")
+        } else {
+          setErrorMsg({ hidden: false, message: "Invalid email or password" });
+          console.log(`Error code : ${xhr.status}`);
+        }
+      }
+      xhr.withCredentials = true;
+      xhr.send(formData);
     }
   };
 
   return (
     <div className="signin">
       <h4>Sign In</h4>
-      <form onSubmit={handleSubmit} method="post">
+      <form onSubmit={handleSubmit} method="post" encType="multipart/form-data">
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -86,8 +106,7 @@ const Login = () => {
 
         <div className="form-group-remember">
           <div>
-            <input type="checkbox" id="rememberMe" name="rememberMe" />
-            <label htmlFor="rememberMe"> Remember Me </label>
+            <p style={{display: errorMsg.hidden? "none" : "inline"}} > {errorMsg.message} </p>
           </div>
           <Link to="/forgot">Forgot Password?</Link>
         </div>

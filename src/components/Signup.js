@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux'
 import "../styles/signup.css";
 
 const Signup = () => {
@@ -22,6 +23,7 @@ const Signup = () => {
   const [formErrors, setFormErrors] = useState({});
 
   const handleInputChange = (e) => {
+    setFormErrors({});
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
@@ -29,6 +31,8 @@ const Signup = () => {
   const handleFileChange = (e) => {
     setFormValues({ ...formValues, profilePhoto: e.target.files[0] });
   };
+
+  const dispatch = useDispatch();
 
   const validate = () => {
     const errors = {};
@@ -63,7 +67,7 @@ const Signup = () => {
 
     // Required fields validation
     Object.keys(formValues).forEach((key) => {
-      if (!formValues[key]) {
+      if (!formValues[key] && key !== "profilePhoto") {
         errors[key] = "This field is required.";
       }
     });
@@ -83,7 +87,22 @@ const Signup = () => {
       xhr.onload = () => {
         if (xhr.status === 200) {
           console.log(JSON.parse(xhr.response));
-          console.log("Form submitted successfully");
+          dispatch({ type: 'message/setMessage', payload: { display: "", message: "Form submitted successfully"} });
+          setFormValues({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phoneNumber: "",
+            dateOfBirth: "",
+            dateOfJoining: "",
+            gender: "",
+            role:"",
+            department: "",
+            profilePhoto: null,
+            password: "",
+            cPassword: "",
+          })
+          e.target.reset();
         } else {
           console.log(`Error code : ${xhr.status}`);
         }
@@ -230,24 +249,24 @@ const Signup = () => {
             <option value="" disabled>
               Select Department
             </option>
-            <option value="publicWorkDepartment">Public Work Department</option>
-            <option value="landAndDevlopmentOffice">
+            <option value="Public Work Department">Public Work Department</option>
+            <option value="Land And Development Office">
               Land And Development Office
             </option>
-            <option value="nationalBuildingsOrganisation">
+            <option value="National Buildings Organisation">
               National Buildings Organisation
             </option>
-            <option value="townandCountryPlanningOrganisation">
+            <option value="Town and Country Planning Organisation">
               Town and Country Planning Organisation
             </option>
-            <option value="waterSupplyDepartment">
+            <option value="Water Supply Department">
               Water Supply Department
             </option>
-            <option value="electricalDepartment">
+            <option value="Electrical Department">
               Electrical Department
             </option>
-            <option value="forestDepartment">Forest Department</option>
-            <option value="privateOrganisations">
+            <option value="Forest Department">Forest Department</option>
+            <option value="Private Organisations">
               Private Organisations
             </option>
           </select>
@@ -263,7 +282,6 @@ const Signup = () => {
             name="profilePhoto"
             accept="image/*"
             onChange={handleFileChange}
-            required
           />
           {formErrors.profilePicture && (
             <span className="error-message">{formErrors.profilePicture}</span>
