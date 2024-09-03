@@ -11,6 +11,7 @@ const Home = () => {
       <Link to='login/'> Login </Link>
       <Link to='signup/'> Singup </Link>
       <Link to='resource/'>Resource</Link>
+      <Link to='addproject/'>AddProject</Link>
     </div>
   )
 }
