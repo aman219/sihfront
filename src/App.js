@@ -9,6 +9,7 @@ import Dashboard from './components/Dashboard';
 import Logout from './components/Logout';
 import MessageBox from './components/MessageBox';
 import AddProject from './components/AddProject';
+import Resource from './components/Resource';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='signup/' element={<Signup />}></Route>
           <Route path='forgot/' element={<Forgot/>}></Route>
           <Route path='employee/addproject' element={<AddProject />}></Route>
+          <Route path='resource/'element={<Resource />}></Route>
         </Routes>
       </BrowserRouter>
     </div> 

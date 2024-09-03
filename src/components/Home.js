@@ -12,6 +12,7 @@ const Home = () => {
       <Notification />
       <Link to='login/'> Login </Link>
       <Link to='signup/'> Singup </Link>
+      <Link to='resource/'>Resource</Link>
     </div>
   )
 }
