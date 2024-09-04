@@ -15,9 +15,12 @@ const Header = () => {
             <li className="flex items-center hover:cursor-pointer hover:border-b-4 hover:border-indigo-500" >Calender</li>
           </ul>
         </div>
-        <div className="flex justify-center items-center text-4xl text-blue-500 hover:cursor-pointer hover:border-b-4 hover:border-indigo-500 hover:bg-indigo-50">
-          <i className="fa-regular fa-bell"></i>
-        </div>
+        <div className="relative flex justify-center items-center text-4xl text-blue-500 hover:cursor-pointer custom-hover-effect">
+  <i className="fa-regular fa-bell"></i>
+</div>
+
+        
+       
         <div className="flex justify-center items-center text-4xl text-blue-500 hover:cursor-pointer hover:border-b-4 hover:border-indigo-500 hover:bg-indigo-50">
           <i className="fa-regular fa-user"></i>
         </div>
