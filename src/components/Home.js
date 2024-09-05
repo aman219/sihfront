@@ -14,6 +14,7 @@ const Home = () => {
       <Link to='signup/'> Singup </Link>
       <Link to='resource/'>Resource</Link>
       <Link to='addproject/'>AddProject</Link>
+      <Link to='project/timeline/'>Timeline</Link>
     </div>
   )
 }

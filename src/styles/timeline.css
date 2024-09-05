@@ -1,0 +1,5 @@
+.circle::after {
+    content: "";
+    left: calc(50% - 12.5px);
+    bottom: 0%;
+}
