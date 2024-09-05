@@ -1,47 +1,50 @@
 import React from 'react'
 import '../styles/timeline.css'
 
+
 const Timeline = () => {
+  
+       
   return (
     <div className='grid grid-cols-8 gap-1' >
       <div className='col-start-1 col-end-2 relative grid min-h-screen max-h-screen'>
-        <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+        <div className='flex justify-center'>
+            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-[#66C2A5] after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
         <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-[#FC8D62] after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
         <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-[#8DA0CB] after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
         <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-[#E78AC3] after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
         <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-[#A6D854] after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
         <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+            <div className='w-2 h-full bg-[#FFD92F] circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
         <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-[#E5C494] after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
         <div className='bg-blue-100 flex justify-center'>
-            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-green-500 after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
+            <div className='w-2 h-full bg-indigo-400 circle relative after:bg-[#B3B3B3] after:w-[25px] after:aspect-square after:rounded-full after:absolute' >
 
             </div>
         </div>
@@ -74,10 +77,10 @@ const Timeline = () => {
             </div>
             <div className='h-20 m-2'>
             <div className=' h-25 m-2'>
-            <h4 className="ml-3 text-slate-800">
+            <h4 className="ml-2 text-slate-800">
             Add hover animation effect to notification icon</h4>
             <div className="flex text-slate-800">
-            <div className='w-4 h-4 bg-red-800 rounded-full mt-3 ml-2 mb-1'></div>
+            <div className='w-4 h-4 bg-red-800 rounded-full mt-3 ml-1 mb-1'></div>
             <p className='ml-2 mt-1'>priyaashu committed 2 days ago</p>
             </div>
             </div>
