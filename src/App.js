@@ -10,6 +10,8 @@ import Logout from './components/Logout';
 import MessageBox from './components/MessageBox';
 import AddProject from './components/AddProject';
 import Resource from './components/Resource';
+import Departments from './components/Departments';
+import UserProfile from './components/UserProfile';
 
 
 function App() {
@@ -26,6 +28,9 @@ function App() {
           <Route path='forgot/' element={<Forgot/>}></Route>
           <Route path='addproject/' element={<AddProject />}></Route>
           <Route path='resource/'element={<Resource />}></Route>
+          <Route path='departments/'element={<Departments />}></Route>
+          <Route path='userprofile/'element={<UserProfile/>}></Route>
+
         </Routes>
       </BrowserRouter>
     </div> 

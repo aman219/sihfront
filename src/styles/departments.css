@@ -1,0 +1,109 @@
+.departments-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    position: relative; /* Important for positioning the lines */
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .read-more {
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Animated lines between cards */
+  .line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(to right, #f06, #f09, #0f6);
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    animation: expandLine 2s ease-in-out infinite;
+  }
+  
+  @keyframes expandLine {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 60px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  
+  /*  changes*/
+.card{
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    
+    background-size: 200% 200%;
+
+    position: relative;
+
+
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after,.card::before{
+   
+    content: "";
+    position:absolute;
+    height:100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle) , transparent 70%,white, blue);
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    z-index:-1;
+    padding: 7px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+
+}
+.card::before{
+    filter:blur(1.5rem);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+       --angle: 360deg;
+    }
+}
+
