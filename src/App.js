@@ -26,7 +26,7 @@ function App() {
           <Route path='signup/' element={<Signup />}></Route>
           <Route path='forgot/' element={<Forgot/>}></Route>
           <Route path='addproject/' element={<AddProject />}></Route>
-          <Route path='resource/'element={<Resource />}></Route>
+          <Route path='addresource/'element={<Resource />}></Route>
           <Route path='project/timeline/' element={<Timeline />}></Route>
         </Routes>
       </BrowserRouter>
