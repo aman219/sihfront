@@ -3,3 +3,21 @@
     left: calc(50% - 12.5px);
     bottom: 0%;
 }
+.header-status{
+  
+    display:flex;
+    justify-content: space-between;
+    
+}
+.status{
+    margin-right:25px;
+}
+.department-location{
+   
+       
+        display:flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    
+}
+
