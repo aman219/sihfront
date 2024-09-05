@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css";
+import { useDispatch } from 'react-redux'
 
 const Login = () => {
   const [formValues, setFormValues] = useState({
@@ -19,6 +20,7 @@ const Login = () => {
   });
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +60,8 @@ const Login = () => {
       xhr.open("POST", `${process.env.REACT_APP_SERVER}/employee/login`, true);
       xhr.onload = () => {
         if (xhr.status === 200) {
-          console.log(JSON.parse(xhr.response));
+          const data = (JSON.parse(xhr.response).data.user);
+          dispatch({ type: 'auth/setAuth', payload: { user: data } });
           navigate("/dashboard")
         } else {
           setErrorMsg({ hidden: false, message: "Invalid email or password" });
