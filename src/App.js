@@ -10,6 +10,7 @@ import Logout from './components/Logout';
 import MessageBox from './components/MessageBox';
 import AddProject from './components/AddProject';
 import Resource from './components/Resource';
+import Timeline from './components/Timeline';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='forgot/' element={<Forgot/>}></Route>
           <Route path='addproject/' element={<AddProject />}></Route>
           <Route path='resource/'element={<Resource />}></Route>
+          <Route path='project/timeline/' element={<Timeline />}></Route>
         </Routes>
       </BrowserRouter>
     </div> 
