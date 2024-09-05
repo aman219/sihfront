@@ -48,19 +48,40 @@ const Timeline = () => {
         
 
       </div>
-      <div className='col-start-2 col-end-9 flex flex-col gap-2'>
-        <div className='bg-red-400 h-[11rem]'>
-            <h4>Project Name : <span>Lorem ipsum dolor sit amet consectetur</span></h4>
-            <h4>Status : <span>Open</span></h4>
-            <h4>Description : <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dolorum sint quaerat qui enim blanditiis numquam excepturi laudantium? Tenetur nisi a optio quod sequi provident.</span></h4>
-            <h4>Department Name : <span>Public Work Department</span></h4>
-            <h4>Location : <span>Mathua</span></h4>
+      <div className='col-start-2 col-end-9 flex flex-col gap-2  '>
+        <div className='h-[11rem] mt-90px p-4  project-container'>
+        <div className='header-status'>
+            <h4 className='text-lg'>Project Name : <span>Lorem ipsum dolor sit amet consectetur</span></h4>
+           
+            <h4 className='status'>Status : <span>Open</span></h4></div>
+            <br />
+            <h4 className='mt-4'>Description : <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></h4>
+            <br />
+            
+            <div className='department-location '>
+            <h4 >Department Name : <span>Public Work Department</span></h4>
+            <h4 className='mr-3' >Location : <span >Mathua</span></h4></div>
+      
         </div>
-        <div className='bg-blue-400' >
-            <div className='bg-red-300 h-20 m-2'>
-
+        <div className='h-20 m-2 ' >
+            <div className=' h-25 m-2'>
+            <h4 className="ml-3 text-slate-800">
+            Add hover animation effect to notification icon</h4>
+            <div className="flex text-slate-800">
+            <div className='w-4 h-4 bg-red-800 rounded-full mt-3 ml-2 mb-1'></div>
+            <p className='ml-2 mt-1'>priyaashu committed 2 days ago</p>
             </div>
-            <div className='bg-red-300 h-20 m-2'>
+            </div>
+            <div className='h-20 m-2'>
+            <div className=' h-25 m-2'>
+            <h4 className="ml-3 text-slate-800">
+            Add hover animation effect to notification icon</h4>
+            <div className="flex text-slate-800">
+            <div className='w-4 h-4 bg-red-800 rounded-full mt-3 ml-2 mb-1'></div>
+            <p className='ml-2 mt-1'>priyaashu committed 2 days ago</p>
+            </div>
+            </div>
+            
 
             </div>
             

@@ -33,7 +33,7 @@ const Header = () => {
 
         
        
-        <div className="flex justify-center items-center text-4xl text-blue-500 hover:cursor-pointer hover:border-b-4 hover:border-indigo-500 hover:bg-indigo-50">
+        <div className="flex justify-center items-center text-4xl text-blue-500 hover:cursor-pointer hover:border-b-4 hover:border-indigo-500 hover:bg-indigo-50 custom-hover-effect">
           <i className="fa-regular fa-user"></i>
         </div>
       </div>
