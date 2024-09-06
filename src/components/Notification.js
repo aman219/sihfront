@@ -26,7 +26,7 @@ const Notification = () => {
 
   return (
     <div className={`bg-white w-[30%] absolute right-10 top-24 min-w-80
-                    min-h-[550px] rounded-[1rem] shadow-lg z-[3]1 ${noti.display} `} >
+                    min-h-[550px] rounded-[1rem] shadow-lg z-[10] ${noti.display} `} >
         <h4 className="py-5 border-b-2 border-indigo-400 text-center font-medium text-slate-600 text-2xl " > Notification </h4>
         
         <div className=" w-[95%] h-16 mx-auto mt-1 grid grid-cols-8 gap-1 relative cursor-pointer">
