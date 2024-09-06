@@ -29,9 +29,11 @@ const Header = () => {
       >
         <i className="fa-regular fa-bell"></i>
       </div>
-
-      <div className="flex justify-center items-center text-4xl text-blue-500 hover:cursor-pointer hover:border-b-4 hover:border-indigo-500 hover:bg-indigo-50 ml-[950px]   custom-hover-effect ">
-        <i className="fa-regular fa-user"></i>
+        
+       
+        <Link to="logout/" className="flex justify-center items-center text-4xl text-blue-500 hover:cursor-pointer hover:border-b-4 hover:border-indigo-500 hover:bg-indigo-50 custom-hover-effect">
+          <i className="fa-solid fa-right-from-bracket"></i>
+        </Link>
       </div>
     </div>
   );

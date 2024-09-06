@@ -30,15 +30,15 @@
 
 }
 
-body {
+/* body {
     background: var(--background-color);
-}
+} */
 
 .main h1 {
     margin-top: 50px;
     margin-bottom: 15px;
     font-size: 50px;
-    color: white;
+    color: rgb(87, 85, 85);
     text-align: center;
 }
 
@@ -47,6 +47,7 @@ body {
 }
 
 .timeline {
+    background-color: red;
     position: relative;
     max-width: 1200px;
     margin: 100px auto;
@@ -166,7 +167,7 @@ body {
 }
 
 .right-container {
-    left: 50%;
+    
 }
 
 .container img {
