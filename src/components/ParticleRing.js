@@ -13,6 +13,11 @@ const ParticleRing = () => {
             duration:2,
             delay:1
           })
+          gsap.to("p",{
+            x:-210,
+            duration:3,
+            delay:2
+          })
         })
   return (
     <div className="relative">
@@ -32,6 +37,7 @@ const ParticleRing = () => {
       <h1 className="absolute top-[45%] left-[20%]  text-slate-200 font-medium text-2xl md:text-5xl pointer-events-none">
         Inter Departments Cities
       </h1>
+      <p className="absolute top-[55%] left-[20%]  text-slate-200 font-small text-s md:text-3xl pointer-events-none">A department admin proposes a project </p>
     </div>
   );
 };
