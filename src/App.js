@@ -16,6 +16,7 @@ import Timeline from "./components/Timeline"
 import AddResponse from './components/AddResponse'
 import SvgAnimation from './components/SvgAnimations';
 import FeedbackForm from './components/Feedback';
+import ImageSlider from './components/ImageSlider';
 
 
 function App() {
@@ -35,16 +36,8 @@ function App() {
           <Route path='project/timeline/' element={<Timeline />}></Route>
           <Route path='project/' element={<Project />}></Route>
           <Route path='departments/' element={<Departments />}></Route>
-<<<<<<< HEAD
-=======
-          <Route path='timeline/' element={<Timeline />}></Route>
-          <Route path="addresponse/" element={<AddResponse/>}></Route>
-          <Route path="svganimations/" element={<SvgAnimation/>}></Route>
-          <Route path="feedbackform/" element={<FeedbackForm />}></Route>
 
-
-
->>>>>>> b7f0a273d486c35fc0ca294201c127c4c5793ade
+          <Route path="imageslider/" element={<ImageSlider/>}></Route>
         </Routes>
       </BrowserRouter>
     </div> 

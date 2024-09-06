@@ -3,12 +3,12 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 
 const SvgAnimation = () => {
-  // Initial and final path states
+  
   const initialPath = `M 10 100 Q 500 100 1490 100`;
   const finalPath = `M 10 100 Q 500 100 1490 100`;
 
   useEffect(() => {
-    // Get the SVG path element
+   
     const pathElement = document.querySelector("svg path");
     const stringElement = document.getElementById("string");
 
@@ -47,7 +47,7 @@ const SvgAnimation = () => {
   return (
     <div id="string" >
       <svg width="1500" >
-        <path d={initialPath} stroke="white" fill="transparent" />
+        <path d={initialPath} stroke="black" fill="transparent" />
       </svg>
     </div>
   );
