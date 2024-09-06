@@ -13,6 +13,9 @@ import Resource from './components/Resource';
 import Project from './components/Project';
 import Departments from './components/Departments';
 import Timeline from "./components/Timeline"
+import AddResponse from './components/AddResponse'
+import SvgAnimation from './components/SvgAnimations';
+import FeedbackForm from './components/Feedback';
 
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
           <Route path='project/' element={<Project />}></Route>
           <Route path='departments/' element={<Departments />}></Route>
           <Route path='timeline/' element={<Timeline />}></Route>
+          <Route path="addresponse/" element={<AddResponse/>}></Route>
+          <Route path="svganimations/" element={<SvgAnimation/>}></Route>
+          <Route path="feedbackform/" element={<FeedbackForm />}></Route>
 
 
 
