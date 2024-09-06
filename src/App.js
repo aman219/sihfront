@@ -28,11 +28,15 @@ function App() {
           <Route path='dashboard/' element={<Dashboard />}></Route>
           <Route path='login/' element={<Login />}></Route>
           <Route path='logout/' element={<Logout />}></Route>
-          <Route path='/' element={<Signup />}></Route>
+          <Route path='signup/' element={<Signup />}></Route>
           <Route path='forgot/' element={<Forgot/>}></Route>
           <Route path='addproject/' element={<AddProject />}></Route>
+          <Route path='addresource/'element={<Resource />}></Route>
+          <Route path='project/timeline/' element={<Timeline />}></Route>
           <Route path='project/' element={<Project />}></Route>
           <Route path='departments/' element={<Departments />}></Route>
+<<<<<<< HEAD
+=======
           <Route path='timeline/' element={<Timeline />}></Route>
           <Route path="addresponse/" element={<AddResponse/>}></Route>
           <Route path="svganimations/" element={<SvgAnimation/>}></Route>
@@ -40,6 +44,7 @@ function App() {
 
 
 
+>>>>>>> b7f0a273d486c35fc0ca294201c127c4c5793ade
         </Routes>
       </BrowserRouter>
     </div> 
